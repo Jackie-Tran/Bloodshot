@@ -1,5 +1,7 @@
 package com.bloodshot.game;
 
-public class Game {
+import java.awt.Canvas;
+
+public class Game extends Canvas implements Runnable {
 
 }
