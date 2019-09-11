@@ -5,17 +5,20 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
-public class Player extends Object{
+public class Mob extends Object{
   
   private BufferedImage image;
+  private int initX, initY;
   private int velX = 0;
   private int velY = 0;
   private int moveSpeed = 5;
   private int health;
   
-  public Player(int x, int y, int width, int height, String img) {
+  public Mob(int x, int y, int width, int height, String img, int health) {
     super(x, y, width, height);
-    this.health = 100;
+    initX = x;
+    initY = y;
+    this.health = health;
     try {
       image = ImageIO.read(getClass().getResource(img));
     } catch (IOException e) {
@@ -31,6 +34,10 @@ public class Player extends Object{
       x += velX;
       y += velY;
       
+  }
+  
+  public void randmove() {
+    
   }
   
   public void changehp(int hp) {
