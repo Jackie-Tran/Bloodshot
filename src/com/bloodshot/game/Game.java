@@ -98,9 +98,6 @@ public class Game extends Canvas implements Runnable {
 	}
 
 	Graphics2D g = (Graphics2D) bs.getDrawGraphics();
-	// ///////////////////////////////
-	// DRAW HERE
-	// ///////////////////////////////
 	g.dispose();
 	bs.show();
     }
